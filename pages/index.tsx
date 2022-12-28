@@ -28,7 +28,7 @@ const Home: NextPage = () => {
   // 0. Wallet Connect - required to check if they own an NFT
   if (!address) {
     return (
-      <div className={styles.container}>
+      <div className={styles.containerdpn}>
         <ConnectWallet colorMode="dark" />
       </div>
     );
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
   // 2. No NFTs - mint page
   if (ownedNfts.length === 0) {
     return (
-      <div className={styles.container}>
+      <div className={styles.containerdpn}>
         <MintContainer />
       </div>
     );
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 
   // 3. Has NFT already - show button to take to game
   return (
-    <div className={styles.container}>
+    <div className={styles.containerdpn}>
       <button
         className={`${styles.mainButton} ${styles.spacerBottom}`}
         onClick={() => router.push(`/play`)}
